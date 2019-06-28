@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="bletest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RasPi BLE Operator" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GhC-3T-bOF">
+                                <rect key="frame" x="81.5" y="97" width="251.5" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="GPIO40" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TLS-Xt-cFY">
+                                <rect key="frame" x="46" y="233" width="253" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="vhM-80-hxL">
+                                <rect key="frame" x="319" y="233" width="51" height="36"/>
+                                <connections>
+                                    <action selector="switchOnOff:" destination="BYZ-38-t0r" eventType="valueChanged" id="nKY-A9-U9V"/>
+                                </connections>
+                            </switch>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FTi-Fz-BJb">
+                                <rect key="frame" x="146" y="375" width="122" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="6L5-Z1-sLq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="接続する"/>
+                                <connections>
+                                    <action selector="operate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xwB-tP-1Io"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vhM-80-hxL" secondAttribute="trailing" constant="46" id="56P-O0-9on"/>
+                            <constraint firstItem="vhM-80-hxL" firstAttribute="top" secondItem="GhC-3T-bOF" secondAttribute="bottom" constant="100" id="8Lz-zq-2m4"/>
+                            <constraint firstItem="GhC-3T-bOF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8xu-Jz-W3D"/>
+                            <constraint firstItem="vhM-80-hxL" firstAttribute="centerY" secondItem="TLS-Xt-cFY" secondAttribute="centerY" id="9Ba-iD-9bQ"/>
+                            <constraint firstItem="TLS-Xt-cFY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="46" id="EsA-CQ-brn"/>
+                            <constraint firstItem="FTi-Fz-BJb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="LX3-9a-Esh"/>
+                            <constraint firstItem="GhC-3T-bOF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="53" id="UfQ-gQ-JQ5"/>
+                            <constraint firstItem="vhM-80-hxL" firstAttribute="leading" secondItem="TLS-Xt-cFY" secondAttribute="trailing" constant="20" id="XnT-0z-jqq"/>
+                            <constraint firstItem="TLS-Xt-cFY" firstAttribute="top" secondItem="GhC-3T-bOF" secondAttribute="bottom" constant="100" id="mhj-XS-vIt"/>
+                            <constraint firstItem="FTi-Fz-BJb" firstAttribute="top" secondItem="TLS-Xt-cFY" secondAttribute="bottom" constant="106" id="trC-JJ-u6j"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="button" destination="FTi-Fz-BJb" id="fFM-OR-pso"/>
+                        <outlet property="onoff" destination="vhM-80-hxL" id="u26-r8-MBp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="118.52678571428571"/>
+        </scene>
+    </scenes>
+</document>
